@@ -1,7 +1,5 @@
-# LUAD-Transcriptomic--Severity-Classification
-A Leakage-free hybrid ensemble framework (1D-CNN, XGBoost,TabPFN) utilizing a 4-stage feature selection funnel for high- dimensional TCGA-LUAD transcriptomic stage classification.
-# 🧬 LUAD Transcriptomic Severity Classification
 
+# 🧬 LUAD Transcriptomic Severity Classification
 A leakage-free, hybrid ensemble framework for **lung adenocarcinoma (LUAD) stage classification** using high-dimensional RNA-Seq data from TCGA. This project integrates **advanced feature selection** and **heterogeneous deep learning models** to deliver biologically validated predictions for precision oncology.
 
 ---
