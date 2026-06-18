@@ -34,4 +34,50 @@ Random Forest         ──> Establishes final biomarker importance ranking
        │
        ▼
 Compact 150-Gene Signature (99.2% Dimensionality Reduction)
-Model ArchitectureThe classification layer combines highly diverse mathematical frameworks into a unified predictive network:1D-CNN: Built to capture positional or structural pattern relationships within the engineered gene profiles, utilizing targeted Dropout (0.45) and L2 regularization to suppress overfitting.XGBoost: A gradient-boosted decision tree architecture utilized to trace sharp tabular splits and non-linear feature boundaries.TabPFN (Prior-Data Fitted Network): A cutting-edge, transformer-based foundation model designed for tabular data, approximating zero-shot Bayesian posterior inferences in a single forward pass.🛡️ Leakage Control & Balancing StrategyTo ensure true model validity on unseen data, SMOTETomek class balancing and feature engineering transformations are performed strictly within each training fold of a Stratified 5-Fold Cross-Validation loop. This shuts down data leakage vectors completely. The individual outputs are aggregated via a soft-voting ensemble.📊 Performance MetricsFinal cross-validated metrics on the TCGA-LUAD cohort:MetricValueClassification Accuracy77.45%Macro F1-Score0.4390Area Under the Curve (ROC-AUC)0.7347🔬 Biological ValidationFunctional enrichment analysis using KEGG pathways verified the clinical profile of the selected 150-gene signature.Highly significant tracking was confirmed for PD-L1 immune evasion mechanisms, KRAS oncogenic signaling pathways, and apical junction dynamics.Extracted a high-confidence consensus triad of biomarker genes: ONECUT1, CDK5R2, and IL9R.🚀 Key Engineering ContributionsZero-Leakage Guarantee: Developed an evaluation layout protecting baseline integrity across unseen validation data folds.99.2% Dimensionality Reduction: Structured a pipeline to collapse massive microarray feature spaces into crisp, actionable indicator panels.Transformer Foundation Integration: Early deployment of tabular foundation transformers (TabPFN) alongside classical boosting architectures.Biologically Actionable Output: Grounded machine learning performance metrics inside established cancer pathway realities.💡 Future ScopeMulti-Omics Fusion: Expanding the dataset matrices to include integrated copy number variations (CNV) and DNA methylation signatures.Clinical Deployment: Structuring the core Python pipeline code into a lightweight decision-support API layer accessible to oncologists.👩‍💻 AuthorKeerthana R Machine Learning Research Analyst | Precision Oncology Enthusiast LinkedIn Profile | Portfolio Page
+---
+
+## 🏗️ Model Architecture
+The classification layer combines highly diverse mathematical frameworks into a unified predictive network:
+* **1D-CNN:** Built to capture positional or structural pattern relationships within the engineered gene profiles, utilizing targeted Dropout ($0.45$) and L2 regularization to suppress overfitting.
+* **XGBoost:** A gradient-boosted decision tree architecture utilized to trace sharp tabular splits and non-linear feature boundaries.
+* **TabPFN (Prior-Data Fitted Network):** A cutting-edge, transformer-based foundation model designed for tabular data, approximating zero-shot Bayesian posterior inferences in a single forward pass.
+
+### 🛡️ Leakage Control & Balancing Strategy
+To ensure true model validity on unseen data, **SMOTETomek** class balancing and feature engineering transformations are performed strictly **within** each training fold of a **Stratified 5-Fold Cross-Validation loop**. This shuts down data leakage vectors completely. The individual outputs are aggregated via a **soft-voting ensemble**.
+
+---
+
+## 📊 Performance Metrics
+Final cross-validated metrics on the TCGA-LUAD cohort:
+
+| Metric | Value |
+| :--- | :---: |
+| **Classification Accuracy** | **77.45%** |
+| **Macro F1-Score** | **0.4390** |
+| **Area Under the Curve (ROC-AUC)** | **0.7347** |
+
+---
+
+## 🔬 Biological Validation
+* **Functional Annotation:** Enrichment analysis using **KEGG pathways** verified the clinical profile of the selected 150-gene signature.
+* **Oncogenic Trackers:** Highly significant tracking was confirmed for **PD-L1 immune evasion mechanisms**, **KRAS oncogenic signaling pathways**, and **apical junction dynamics**.
+* **Consensus Biomarkers:** Extracted a high-confidence consensus triad of biomarker genes: **ONECUT1, CDK5R2, and IL9R**.
+
+---
+
+## 🚀 Key Engineering Contributions
+* **Zero-Leakage Guarantee:** Developed an evaluation layout protecting baseline integrity across unseen validation data folds.
+* **99.2% Dimensionality Reduction:** Structured a pipeline to collapse massive microarray feature spaces into crisp, actionable indicator panels.
+* **Transformer Foundation Integration:** Early deployment of tabular foundation transformers (TabPFN) alongside classical boosting architectures.
+* **Biologically Actionable Output:** Grounded machine learning performance metrics inside established cancer pathway realities.
+
+---
+
+## 💡 Future Scope
+* **Multi-Omics Fusion:** Expanding the dataset matrices to include integrated copy number variations (CNV) and DNA methylation signatures.
+* **Clinical Deployment:** Structuring the core Python pipeline code into a lightweight decision-support API layer accessible to oncologists.
+
+---
+
+## 👩‍💻 Author
+**Keerthana R** *Machine Learning Research Analyst | Precision Oncology Enthusiast* [LinkedIn Profile](www.linkedin.com/in/keerthana-ramachandran-2029a4252) | [Portfolio Page](https://www.datascienceportfol.io/ramachandrankeerthan)
