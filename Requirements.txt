@@ -1,0 +1,11 @@
+pandas
+numpy
+tensorflow>=2.0
+scikit-learn
+skrebate
+mrmr-selection
+imbalanced-learn
+xgboost
+tabpfn
+matplotlib
+seaborn
